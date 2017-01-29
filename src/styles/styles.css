@@ -1,0 +1,68 @@
+#app {
+  font: 14px 'Helvetica Neue', Helvatica, Arial, sans-serif;
+  color: #4d4d4d;
+  min-width: 550px;
+  margin: 0 auto;
+}
+
+a.active {
+  color: orange;
+}
+
+section {
+  margin: 50px;
+}
+
+nav {
+  padding-right: 40px;
+}
+.navbar-brand {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+nav a {
+  font-size: 1.5em;
+}
+.btn-start {
+  margin: 40px 0;
+}
+
+.drink-selection-container {
+  position: relative;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#Drink-Display {
+  position: relative;
+  margin: 40px 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drinkItem {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px 40px;
+
+}
+.drinkItem:focus,
+.drinkItem:hover {
+  background: #e7e7e7;
+  cursor: pointer;
+}
+
+i.fa.Light {
+  color: #F29E5D;
+}
+
+i.fa.Medium {
+  color: #B27545;
+}
+
+i.fa.Dark {
+  color: #664224;
+}
