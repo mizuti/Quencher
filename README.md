@@ -9,8 +9,8 @@ A project to apply and learn about React.js
 * Hot reloading on local server
 * Tied together with NPM scripts
  
- ## Installation
- 
+## Installation 
+
 Clone Repo
 
 ``` text
