@@ -6,6 +6,8 @@ A project to apply and learn about React.js
 * Compilation with webpack
 * ES6 syntax transpiled with Babel
 * React and JSX
+* Redux
+* react-router
 * Hot reloading on local server
 * Tied together with NPM scripts
  
