@@ -1,16 +1,18 @@
 import React, {PropTypes} from 'react';
+import DrinkItem from './DrinkItem';
 
-const DrinkSelection = ({options})
-render() {
+const DrinkSelection = ({drinkOptions}) => {
+
     return (
-      <div className="row">
-
+      <div className="container drink-selection-container">
+        {drinkOptions.map(drink =>
+          <DrinkItem key={drink.id} drink={drink} onClick={}/>
+        )}
       </div>
     );
-  }
-}
+};
 
-DrinkSection.propTypes = {
+DrinkSelection.propTypes = {
   drinkOptions: PropTypes.array.isRequired
 };
 
