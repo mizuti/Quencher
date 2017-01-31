@@ -1,16 +1,24 @@
 import React, {PropTypes} from 'react';
 
-const DrinkItem = ({drink}) => {
-  return (
-    <div className="thumbnail drinkItem">
-      <i className={"fa fa-coffee fa-5x "+drink.title}></i>
-      <h3>{drink.title}</h3>
-    </div>
-  );
-};
+
+class DrinkItem extends React.Component {
+	constructor(props){
+		super(props);
+	}
+
+  render() {
+    return (
+			<div className="thumbnail drinkItem" onClick={this.props.click}>
+				<i className={"fa fa-coffee fa-5x " + this.props.drink.title}></i>
+				<h3>{this.props.drink.title}</h3>
+			</div>
+		);
+  }
+}
 
 DrinkItem.propTypes = {
-  drink: PropTypes.object.isRequired
+  drink: PropTypes.object.isRequired,
+  click: PropTypes.func
 };
 
 export default DrinkItem;
