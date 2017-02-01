@@ -4,9 +4,8 @@ export function updateConsumedDrinks(drink) {
 	return {type: types.ADD_DRINK_SUCCESS, drink};
 }
 
-export function consumeDrink(drink) {
+export function actionConsumeDrink(drink) {
 	return function(dispatch) {
-		console.log(drink);
 		return dispatch(updateConsumedDrinks(drink));
 	};
 }

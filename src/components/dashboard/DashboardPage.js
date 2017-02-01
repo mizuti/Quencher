@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import DrinkSelection from './DrinkSelection';
 import DrinkDisplay from './DrinkDisplay';
-import * as dashboardActions from '../../actions/dashboardActions';
 
 class DashboardPage extends React.Component {
   constructor(props, context){
@@ -17,22 +16,23 @@ class DashboardPage extends React.Component {
         { id: 3,
           title: 'Dark' }
       ],
-      consumedDrinks: this.props.consumedDrinks
+      // consumedDrinks: [...props.consumedDrinks]
     };
 
-    this.consumeDrink = this.consumeDrink.bind(this);
+    // this.consumeDrink = this.consumeDrink.bind(this);
   }
 
-  consumeDrink(drink) {
-    this.props.actions.consumeDrink('drink');
-  }
+  // consumeDrink() {
+  //   console.log(this.state.consumedDrinks);
+  //   this.props.actions.consumeDrink('drink');
+  // }
 
   render() {
     return (
       <div className="text-center">
         <h1>Quench</h1>
         <section className="text-center">
-          <DrinkSelection drinkOptions={this.state.drinks} click={this.consumeDrink}/>
+          <DrinkSelection drinkOptions={this.state.drinks}/>
           {/*<DrinkDisplay drinksConsumed={this.state.consumedDrinks} />*/}
         </section>
       </div>
@@ -46,16 +46,11 @@ DashboardPage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-  let consumedDrinks = [];
-  return {
-    consumedDrinks: consumedDrinks
-  };
+  return {};
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(dashboardActions, dispatch)
-  };
+ return {};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(DashboardPage);

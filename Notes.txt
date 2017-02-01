@@ -1,0 +1,36 @@
+# Tech Overview:
+    - Babel - Transpiles ES6 to ES5
+        - Babel-polyfill - safely compiles everything
+            - downside, rather large. 50k mini.
+
+    - Webpack - Module Bundler
+    - Mocha - Testing
+    - ESLint - lint code, force best practices. Compile time checking
+
+
+    Hot Reloading:
+        Babel-preset-react-hmre
+
+
+
+
+# React Component Creation:
+  ES5 createClass
+  ES5 stateless function
+
+  ES6 class
+  ES6 stateless functions
+
+
+
+# Reducers
+  - Pure functions - A function call with the same parameters will return the same result
+
+  * Forbidden rules of Reducers
+    - Cannot mutate arguments
+    - Cannot perform side effects
+    - Must call pure functions
+
+
+
+

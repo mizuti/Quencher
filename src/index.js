@@ -5,12 +5,12 @@ import configureStore from './store/configureStore';
 import {Provider} from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
-import {consumeDrink} from './actions/dashboardActions'
+import {actionConsumeDrink} from './actions/dashboardActions'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.css';
 
 const store = configureStore();
-store.dispatch(consumeDrink());
+store.dispatch(actionConsumeDrink);
 
 render(
   <Provider store={store}>
