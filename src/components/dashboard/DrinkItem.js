@@ -8,10 +8,10 @@ class DrinkItem extends React.Component {
 
   render() {
     return (
-			<aadiv className="thumbnail drinkItem" onClick={this.props.click}>
+			<div className="thumbnail drinkItem" onClick={this.props.click}>
 				<i className={"fa fa-coffee fa-5x " + this.props.drink.title}></i>
 				<h3>{this.props.drink.title}</h3>
-			</aadiv>
+			</div>
 		);
   }
 }

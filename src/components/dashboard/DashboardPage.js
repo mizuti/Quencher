@@ -31,10 +31,9 @@ class DashboardPage extends React.Component {
     return (
       <div className="text-center">
         <h1>Quench</h1>
-        <section className="text-center">
+        <div className="text-center">
           <DrinkSelection drinkOptions={this.state.drinks}/>
-          {/*<DrinkDisplay drinksConsumed={this.state.consumedDrinks} />*/}
-        </section>
+        </div>
       </div>
       );
   }

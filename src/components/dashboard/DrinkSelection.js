@@ -15,19 +15,32 @@ class DrinkSelection extends React.Component {
 		this.consumeDrink = this.consumeDrink.bind(this);
 	}
 
-  consumeDrink(event) {
-    this.props.actions.actionConsumeDrink('drink');
-	  console.log(this.props.consumedDrinks);
+  consumeDrink(drink, event) {
+		console.log(this.props.consumedDrinks);
+	  return this.props.actions.actionConsumeDrink(drink.title);
   }
 
 	render(){
 		return (
-			<div className="container drink-selection-container">
-				{this.props.drinkOptions.map(drink =>
-				<div>
-					<DrinkItem key={drink.id} drink={drink} click={this.consumeDrink} />
-				</div>
-				)}
+			<div>
+				<section className="row">
+					<div className="container drink-selection-container">
+						{this.props.drinkOptions.map(drink =>
+							<div>
+								<DrinkItem key={drink.id} drink={drink} click={this.consumeDrink.bind(null, drink)} />
+							</div>
+						)}
+					</div>
+				</section>
+
+				<section className="row">
+					<div className="container drinks-consumed-container">
+					{this.props.consumedDrinks.map(drink =>
+						<div className=""><i className={"fa fa-coffee fa-2x " + drink}></i></div>
+					)}
+					</div>
+
+				</section>
 			</div>
 		);
 	}
@@ -40,9 +53,8 @@ DrinkSelection.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-	// state.{object} is set in 
+	// state.{object} is set in
 	let consumedDrinks = [...state.consumedDrinks];
-	console.log(state);
 	return {
 		consumedDrinks: consumedDrinks
 	};

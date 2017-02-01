@@ -35,6 +35,19 @@ nav a {
   justify-content: space-between;
 }
 
+.drinks-consumed-container {
+  position: relative;
+  max-width: 800px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+}
+
+.drinks-consumed-container > div {
+  display: inline-block;
+  margin: 0 auto;
+}
+
 #Drink-Display {
   position: relative;
   margin: 40px 0;
